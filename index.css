@@ -1,0 +1,445 @@
+* {
+    padding: 0;
+    margin: 0;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+
+}
+html{
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+    height: 300vh;
+    /* background-image: url(https://i.pinimg.com/originals/36/30/00/363000c1b5735897d229b4d3f2504126.jpg); */
+    background-repeat: no-repeat;
+    background-size: cover;
+    scroll-behavior: smooth;
+}
+
+header {
+    width: 100%;
+    height: 10%;
+    background-color: white;
+    display: flex;
+    flex-direction: row-reverse;
+    z-index: 2;
+    animation: 2s forwards;
+    transition: .5s;
+    position: fixed;
+    z-index: 1000;
+
+}
+
+.aparecer {
+    animation: visibilidad 2s forwards;
+    transition: 5s;
+}
+
+@keyframes aparecerResponsive {
+    from {
+        opacity: 0;
+        transition: .5s;
+    }
+
+    to {
+        opacity: 1;
+        transition: .5s;
+    }
+}
+
+@keyframes desaparecerResponsive {
+    from {
+        height: 100%;
+        transition: .5s;
+    }
+
+    to {
+        height: 10%;
+        transition: .5s;
+    }
+}
+
+@keyframes aparecerResponsive {
+    from {
+        height: 10%;
+        transition: .5s;
+    }
+
+    to {
+        height: 100%;
+        transition: .5s;
+    }
+}
+
+
+.rightside {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.ul-box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    gap: 2.5rem;
+}
+
+.list {
+    list-style-type: none;
+    font-weight: bold;
+    position: relative;
+    padding: 5px;
+    cursor: pointer;
+}
+
+
+.list::after {
+    content: "";
+    position: absolute;
+    left: 0%;
+    bottom: 0%;
+    width: 00%;
+    height: 10%;
+    border-bottom: 2px solid black;
+    transition: .5s;
+}
+
+.list::before {
+    content: "";
+    position: absolute;
+    right: 0%;
+    bottom: 0%;
+    width: 00%;
+    height: 10%;
+    border-bottom: 2px solid black;
+    transition: .5s;
+}
+
+.list:hover::before,
+.list:hover::after {
+    transition: .5s;
+    width: 100%;
+    cursor: pointer;
+}
+
+.leftside {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    margin-left: 5%;
+    gap: 2rem;
+}
+
+.leftside img {
+    height: 80%;
+}
+
+.center {
+    display: none;
+}
+
+
+.bground {
+    position: absolute;
+    width: 100%;
+    padding: 0 auto;
+    margin: 0 auto;
+    height: 100%;
+    display: flex;
+    z-index: 0;
+    align-items: center;
+    justify-content: center;
+}
+
+.bgroundImg {
+    height: 90%;
+    width: 95%;
+    position: relative;
+    background-image: url(https://miro.medium.com/max/1400/0*zD6qM5Tg2aQcA-BY);
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 20px;
+    opacity: 1;
+    display: flex;
+    align-items: center;
+    box-shadow: inset 0px 48px 61px -30px rgba(0, 0, 0, 0.75);
+
+}
+
+.bgroundImg::before {
+    content: "";
+    background-color: black;
+    background-size: cover;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+    opacity: 0.75;
+    z-index: 2;
+}
+
+.cajitaRedes {
+    width: 80px;
+    height: 270px;
+    background-color: white;
+    border-radius: 5px;
+    position: relative;
+    display: flex;
+    z-index: 12;
+    border-left: 2px solid black;
+    /* box-shadow: inset 52px 0px 61px -30px rgba(0, 0, 0, 0.508); */
+}
+
+.cajitaRedes ul {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    gap: 2rem;
+    z-index: 512;
+
+
+}
+
+.cajitaRedes ul li {
+    list-style-type: none;
+}
+
+.iconitos {
+    font-size: 30px;
+    transition: .5s;
+}
+
+.section {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    z-index: 1;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+    position: absolute;
+    pointer-events: none;
+}
+
+#titulo {
+    font-size: 40px;
+}
+
+
+.leftbar {
+    width: 100px;
+    height: 500px;
+    background-color: purple;
+    position: absolute;
+}
+
+.topside {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 1rem;
+    z-index: 2;
+}
+
+.topside button {
+    width: 150px;
+    height: 50px;
+    background-color: rgba(0, 0, 0, 0.439);
+    border: 1px solid white;
+    border-radius: 5px;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    padding: 0;
+    cursor: pointer;
+    transition: .5s;
+    pointer-events: all !important;
+    color: white;
+    position: relative;
+
+}
+
+.topside button::after {
+    content: "";
+    position: absolute;
+    bottom: -20%;
+    left: -1%;
+    border-bottom: 2px solid white;
+    width: 10%;
+    transition: .5s;
+
+}
+
+.topside button::before {
+    content: "";
+    position: absolute;
+    bottom: -20%;
+    right: -1%;
+    border-bottom: 2px solid white;
+    width: 10%;
+    transition: .5s;
+
+}
+
+.topside button:hover::before,
+.topside button:hover::after {
+    width: 100%;
+    transition: .5s;
+}
+
+.topside button:hover {
+    transform: scale(1.1, 1.1);
+    transition: .5s;
+    box-shadow: -2px -10px 131px -9px rgba(0, 0, 0, 0.836);
+    color: black;
+    pointer-events: all;
+    background-color: lightblue;
+
+}
+
+.aparecer {
+    animation-name: aparecer;
+    animation-duration: 1.5s;
+    animation-fill-mode: forwards;
+
+}
+
+@keyframes aparecer {
+    from {
+        opacity: 0%;
+    }
+
+    to {
+        opacity: 100%;
+    }
+}
+
+#animacionCrecer {
+    transition: .5s;
+}
+
+#animacionCrecer:hover {
+    animation: crecer .7s forwards;
+    transition: .5s;
+}
+
+@keyframes crecer {
+    0% {
+        transform: scale(1.0, 1.0);
+        transition: .5s;
+    }
+
+    /* 50% {
+        transform: scale(1.1, 1.1);
+        transition: .5s;
+    } */
+    100% {
+        transform: scale(1.1, 1.1);
+        transition: .5s;
+    }
+}
+
+.center {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 4rem;
+    text-align: center;
+    margin: 0 auto;
+    padding: 0 auto;
+}
+
+.responsive-list {
+    display: none;
+    flex-direction: column;
+    gap: 2rem;
+    align-items: center;
+}
+
+.responsive-list li {
+    list-style-type: none;
+    font-weight: normal;
+}
+
+ion-icon {
+    transition: .5s !important;
+}
+
+.icono {
+    position: absolute;
+}
+
+.iconoApagado {
+    display: none;
+    font-size: 20px;
+}
+
+
+
+
+
+.body {
+    animation: aparecerBody 1s;
+    animation-fill-mode: forwards;
+
+}
+
+@keyframes aparecerBody {
+    from {
+        transform: scale(0.1, 0.1);
+        opacity: 0;
+    }
+
+    to {
+        transform: scale(1.0, 1.0);
+        opacity: 1;
+    }
+}
+
+
+@media (max-width: 850px) {
+    .center {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        height: 100%;
+    }
+
+    .leftside {
+        display: none;
+    }
+
+    .rightside {
+        display: none;
+    }
+    .cajitaRedes{
+        display: none;
+    }
+    .topside #titulo{
+        font-size: 30px;
+    }
+    .topside .text{
+        font-size: 12px;
+    }
+}

@@ -1,0 +1,13 @@
+.pagina3 {
+    width: 100%;
+    background-color: white;
+    height: 33%;
+    top: 33%;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap: 1rem;
+}
